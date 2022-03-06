@@ -1,10 +1,11 @@
-import TestDate from './TestDate';
-import './TestItem.css';
+import Card from '../UI/Card';
+import QuranTestDate from './QuranTestDate';
+import './QuranTestItem.css';
 
-function TestItem(props) {
+const QuranTestItem = (props) => {
     return (
-        <div className='test-item'>
-            <TestDate date={props.date} />
+        <Card className='test-item'>
+            <QuranTestDate date={props.date} />
             <div className='test-item__price'>
                 <h2>{props.childName}</h2>
             </div>
@@ -16,8 +17,8 @@ function TestItem(props) {
                     <p>Status {props.status}</p>
                 </div>
             </div>
-        </div>
+        </Card>
     );
 }
 
-export default TestItem;
+export default QuranTestItem;

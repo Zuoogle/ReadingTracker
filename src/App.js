@@ -1,6 +1,6 @@
-import Tests from "./components/Tests";
+import Tests from './components/QuranTests/QuranTests';
 
-function App() {
+const App = () => {
   const testResult = [
     {
       id: '1',
@@ -32,7 +32,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <h2>Quran Progress Tracker</h2>
+      <h2 >Quran Progress Tracker</h2>
       <Tests result={testResult} />
     </div >
   );
