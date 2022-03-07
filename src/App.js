@@ -10,13 +10,13 @@ const App = () => {
       date: new Date(2021, 7, 25),
       startAyah: '45',
       endAyah: '55',
-      status: 'Pass'
+      status: 'Fail'
     },
     {
       id: '2',
       childName: 'Abdurehman Mensur',
       surah: 'Al-Imran',
-      date: new Date(2022, 2, 12),
+      date: new Date(2020, 2, 12),
       startAyah: '120',
       endAyah: '245',
       status: 'Pass'
@@ -25,10 +25,10 @@ const App = () => {
       id: '3',
       childName: 'Hebatullah Mensur',
       surah: 'An-Nissa',
-      date: new Date(2020, 4, 14),
+      date: new Date(2022, 2, 6),
       startAyah: '100',
       endAyah: '109',
-      status: 'Fail'
+      status: 'Pass'
     }
   ];
   const addQuranTestHandler= quranTest =>{

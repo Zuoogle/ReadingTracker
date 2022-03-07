@@ -1,17 +1,22 @@
+import React, { useState } from 'react';
 import QuranTestItem from './QuranTestItem';
 import Card from '../UI/Card';
-import './QuranTests.css';
 import QuranTestFilter from '../QuranTestFilter/QuranTestFilterByYear';
+import './QuranTests.css';
 
 const QuranTests = (props) => {
+    const [filteredYear, setFilteredYear] = useState('2020');
 
-
+    const filterChangeHandler = selectedYear => {
+        setFilteredYear(selectedYear);
+    }
 
     return (
-        <Card className="tests">
-            <div>
-
-                <QuranTestFilter />
+        <div>
+            <Card className="tests">
+                <QuranTestFilter
+                    selected={filteredYear}
+                    onChangeFilter={filterChangeHandler} />
                 <QuranTestItem
                     id={props.result[0].id}
                     childName={props.result[0].childName}
@@ -39,8 +44,8 @@ const QuranTests = (props) => {
                     endAyah={props.result[2].endAyah}
                     status={props.result[2].status}
                 />
-            </div>
-        </Card>
+            </Card>
+        </div>
     );
 }
 

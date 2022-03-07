@@ -1,16 +1,10 @@
-import React, { useState }  from "react";
+import React from 'react';
 
-import QuranTestDate from './QuranTestDate';
 import Card from '../UI/Card';
+import QuranTestDate from './QuranTestDate';
 import './QuranTestItem.css';
 
 const QuranTestItem = (props) => {
-    const [surah, setSurah] = useState(props.surah);
-
-    const clickHandler = () => {
-        setSurah('New Surah');
-        console.log(surah);
-    };
 
     return (
         <Card className='test-item'>
@@ -25,7 +19,6 @@ const QuranTestItem = (props) => {
                     <p>To {props.endAyah}</p>
                     <p>Status {props.status}</p>
                 </div>
-                <button onClick={clickHandler}>Change Surah</button>
             </div>
         </Card>
     );
